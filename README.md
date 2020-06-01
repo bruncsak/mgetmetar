@@ -1,14 +1,17 @@
-Have you lost on your RedHat/CentOS 6 gnome desktop the weather icon around 2016?
+# Have you lost the weather icon on your RedHat/CentOS 6 gnome desktop around 2016?
+
 That is because the weather service moved away from weather.noaa.gov to aviationweather.gov.
 
 RedHat considers version 6 as outgoing so they won't fix libgweather:
+
 https://bugzilla.redhat.com/show_bug.cgi?id=1372738
 https://bugzilla.redhat.com/show_bug.cgi?id=1385478
 
 Here is a quick workaround for the problem to get back the weather station on your desktop.
 No need to rebuild libgweather, just run this small web gateway.
 
-Installation:
+# Installation:
+````
 1.
   yum install httpd
   chkconfig httpd on
@@ -24,3 +27,4 @@ Installation:
  Copy this file into /var/www/cgi-bin/mgetmetar.pl
     and
  chmod +x /var/www/cgi-bin/mgetmetar.pl
+````
