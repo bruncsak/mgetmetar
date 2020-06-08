@@ -26,5 +26,6 @@ No need to rebuild libgweather, just run this small web gateway.
 4.
  Copy this file into /var/www/cgi-bin/mgetmetar.pl
     and
- chmod +x /var/www/cgi-bin/mgetmetar.pl
+ chmod  +x  /var/www/cgi-bin/mgetmetar.pl
+ restorecon /var/www/cgi-bin/mgetmetar.pl
 ````
