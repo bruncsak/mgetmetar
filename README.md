@@ -14,16 +14,19 @@ No need to rebuild libgweather, just run this small web gateway.
 ````
 1.
   yum install httpd
+2.
+  echo Timeout 600 > /etc/httpd/conf.d/Timeout.conf
+3.
   chkconfig httpd on
   service httpd start
-2.
+4.
    setsebool -P httpd_can_network_connect on
-3.
+5.
  Append in the /etc/hosts file to the localhost entries weather.noaa.gov
   you should got something like:
     127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 weather.noaa.gov
     ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6 weather.noaa.gov
-4.
+6.
  Copy this file into /var/www/cgi-bin/mgetmetar.pl
     and
  chmod  +x  /var/www/cgi-bin/mgetmetar.pl
